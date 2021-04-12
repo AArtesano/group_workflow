@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
         }
-
+        total.setText("TOTAL PRICE: " + calculate_total() + "PHP");
     }
-
-}
+    private double calculate_total() {
+        total_price = order.getBurger()+order.getCoffee()+order.getCola()+order.getPasta();
+        return total_price;
+}}

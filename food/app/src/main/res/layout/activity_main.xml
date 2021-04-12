@@ -4,21 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fadingEdge="none"
+    app:layout_dodgeInsetEdges="all"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="239dp"
+        android:layout_width="250dp"
         android:layout_height="50dp"
         android:text="SELECT YOUR ORDER"
-        android:textColor="#2196F3"
+        android:textColor="#009688"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.097" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -27,66 +31,75 @@
         android:onClick="onCheckboxClicked"
         android:text="BURGER 50PHP"
         android:textSize="18sp"
+        app:buttonTint="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintHorizontal_bias="0.288"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.209" />
+        app:layout_constraintVertical_bias="0.233" />
 
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="217dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginBottom="372dp"
         android:onClick="onCheckboxClicked"
         android:text="PASTA 100PHP"
         android:textSize="18sp"
+        app:buttonTint="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" />
 
     <CheckBox
         android:id="@+id/checkBox3"
         android:layout_width="217dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
         android:onClick="onCheckboxClicked"
         android:text="COLA 45PHP"
         android:textSize="18sp"
+        app:buttonTint="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.288"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.443" />
+        app:layout_constraintVertical_bias="0.502" />
 
     <CheckBox
         android:id="@+id/checkBox4"
         android:layout_width="217dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
         android:onClick="onCheckboxClicked"
         android:text="COFFEE 35PHP"
         android:textSize="18sp"
+        app:buttonTint="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.288"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
+        app:layout_constraintVertical_bias="0.412" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="371dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:text="TOTAL PRICE:      "
-        android:textColor="#F11212"
+        android:layout_width="304dp"
+        android:layout_height="40dp"
+        android:background="#009688"
+        android:fadingEdge="horizontal"
+        android:requiresFadingEdge="horizontal|vertical"
+        android:text="  TOTAL PRICE:      "
+        android:textColor="#F8F5F5"
         android:textSize="24sp"
         android:textStyle="bold"
+
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.721" />
+        app:layout_constraintVertical_bias="0.685" />
 </androidx.constraintlayout.widget.ConstraintLayout>
