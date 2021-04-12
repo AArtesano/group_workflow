@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Order order;
     TextView total;
     double total_price;
+    TextView delivery;
     Button button;
 
     @Override
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         order = new Order();
         total = findViewById(R.id.textView2);
+        delivery = findViewById(R.id.deliveryNote);
 
         button = (Button) findViewById(R.id.Button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -75,4 +77,12 @@ public class MainActivity extends AppCompatActivity {
     private double calculate_total() {
         total_price = order.getBurger()+order.getCoffee()+order.getCola()+order.getPasta();
         return total_price;
-}}
+}
+    public void onSwitchClicked(View view) {
+        Switch swButton = (Switch) view;
+        if (swButton.isChecked()) {
+            delivery.setText("Delivery required!");
+        } else
+            delivery.setText("");
+
+}
