@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     TextView delivery;
     Button button;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         order = new Order();
         total = findViewById(R.id.textView2);
-        delivery = findViewById(R.id.deliveryNote);
+        delivery = findViewById(R.id.switch1);
 
         button = (Button) findViewById(R.id.Button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -81,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
     public void onSwitchClicked(View view) {
         Switch swButton = (Switch) view;
         if (swButton.isChecked()) {
-            delivery.setText("Delivery required!");
+            delivery.setText("Yes");
         } else
             delivery.setText("");
 
-}
+}}
