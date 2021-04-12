@@ -1,8 +1,12 @@
 package com.sample1.foodorder;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
@@ -11,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Order order;
     TextView total;
     double total_price;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +25,18 @@ public class MainActivity extends AppCompatActivity {
         order = new Order();
         total = findViewById(R.id.textView2);
 
+        button = (Button) findViewById(R.id.Button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAboutUs();
+            }
+        });
+    }
+
+    public void openAboutUs() {
+        Intent intent = new Intent(this, AboutUs.class);
+        startActivity(intent);
     }
 
     public void onCheckboxClicked(View view) {
